@@ -1,5 +1,5 @@
 import { colors_default } from './colors-default';
-import { spacing } from './spacing';
+import { widths } from './widths';
 
 export default {
   title: 'light',
@@ -13,5 +13,5 @@ export default {
     text: 'hsl(230, 17%, 14%)',
     toggle: 'hsl(230, 22%, 74%)',
   },
-  spacing,
+  widths,
 };

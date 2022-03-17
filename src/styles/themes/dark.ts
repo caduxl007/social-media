@@ -1,5 +1,5 @@
 import { colors_default } from './colors-default';
-import { spacing } from './spacing';
+import { widths } from './widths';
 
 export default {
   title: 'dark',
@@ -13,5 +13,5 @@ export default {
     text: 'hsl(0, 0%, 100%)',
     toggle: 'linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%)',
   },
-  spacing,
+  widths,
 };
