@@ -29,6 +29,8 @@ export default createGlobalStyle`
 
   body {
     scroll-behavior: smooth;
+    background-color: ${({ theme }) => theme.colors.background};
+
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale;
