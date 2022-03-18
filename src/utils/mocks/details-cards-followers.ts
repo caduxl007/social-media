@@ -5,7 +5,7 @@ type CardFollowersProps = {
   total_followers: string;
   today_followers: string;
   is_gained_followers: boolean;
-}
+};
 
 export const details_cards_followers = [
   {

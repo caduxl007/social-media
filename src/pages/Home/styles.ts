@@ -8,23 +8,13 @@ export const Container = styled.div`
   }
 `;
 
-export const ContentCardsFollowers = styled.section`
-  display: flex;
-  gap: 3rem;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
-  position: relative;
-  top: -100px;
-`;
-
 export const ContentCardsOverviewToday = styled.section`
   h2 {
     font-size: 2.8rem;
     color: ${({ theme }) => theme.colors.text};
   }
 
-   >div {
+  > div {
     margin-top: 2rem;
     display: flex;
     gap: 3rem;

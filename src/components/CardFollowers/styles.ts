@@ -5,7 +5,7 @@ interface ContainerProps {
   is_gained_followers: boolean;
 }
 
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.li<ContainerProps>`
   background: ${({ theme }) => theme.colors.blue_card};
   max-width: 28rem;
   width: 100%;
