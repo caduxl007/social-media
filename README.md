@@ -49,7 +49,7 @@ $ yarn dev
 
 ```bash
 # Para executar os testes:
-$ yarn test
+$ yarn start
 
 ## Prontinho você terá acesso aos testes!!! 
 ```
