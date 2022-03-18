@@ -1,7 +1,7 @@
 import { colors_default } from './colors-default';
 import { widths } from './widths';
 
-export default {
+const light = {
   title: 'light',
 
   colors: {
@@ -15,3 +15,5 @@ export default {
   },
   widths,
 };
+
+export default light;
