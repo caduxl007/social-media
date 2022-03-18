@@ -1,14 +1,17 @@
 import * as S from './styles';
 import { SwitchButtonTheme } from './SwitchButtonTheme';
 
-export function Header() {
+interface HeaderProps {
+  total_followers: string;
+}
 
+export function Header({ total_followers }: HeaderProps) {
   return (
     <S.Container>
       <S.ContentHeader>
         <div>
           <h2>Social Media Dashboard</h2>
-          <p>Total Followers: 23,004</p>
+          <p>Total Followers: {total_followers}</p>
         </div>
 
         <div>
