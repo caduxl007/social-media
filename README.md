@@ -7,6 +7,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [ReactJS](https://pt-br.reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/) 
 - [Styled-components](https://styled-components.com/)
+- [React-Beautiful-DnD](https://github.com/atlassian/react-beautiful-dnd)
+- [Vercel](https://vercel.com/)
 - [Jest](https://jestjs.io/pt-BR/)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 
@@ -18,6 +20,10 @@ As seguintes funcionalidades foram implementadas:
 - [x] Arrastar e Soltar
 - [x] Responsividade
 - [x] Testes unitários
+
+## 🖥 Deploy da aplicação:
+
+- [Social-Media](https://social-mediavercelapp-caduxl007.vercel.app/)
 
 <h1>📱 Como usar? </h1> 
 
@@ -40,7 +46,7 @@ Instale as dependências
 $ yarn
 
 # Execute a aplicação
-$ yarn dev
+$ yarn start
 
 ## Prontinho você terá acesso a aplicação!!! 
 ```
@@ -49,7 +55,7 @@ $ yarn dev
 
 ```bash
 # Para executar os testes:
-$ yarn start
+$ yarn test
 
 ## Prontinho você terá acesso aos testes!!! 
 ```
