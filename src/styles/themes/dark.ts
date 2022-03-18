@@ -11,7 +11,7 @@ export default {
     blue_card: 'hsl(228, 28%, 20%)',
     blue_text: 'hsl(228, 34%, 66%)',
     text: 'hsl(0, 0%, 100%)',
-    toggle: 'linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%)',
+    toggle: 'linear-gradient(#378EE6, #3EDA81)',
   },
   widths,
 };
