@@ -14,12 +14,13 @@ jest.mock('hooks/useTheme', () => {
 });
 
 describe('Header component', () => {
-
   it('renders correctly', () => {
-  const total_followers = '2300';
+    const total_followers = '2300';
 
     renderTheme(<Header total_followers={total_followers} />);
 
-    expect(screen.getByText(`Total Followers: ${total_followers}`)).toBeInTheDocument();
+    expect(
+      screen.getByText(`Total Followers: ${total_followers}`),
+    ).toBeInTheDocument();
   });
 });

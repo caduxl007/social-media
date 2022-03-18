@@ -21,7 +21,7 @@ export function Home() {
 
   return (
     <S.Container>
-      <Header />
+      <Header total_followers="23,114" />
       <main>
         <SectionCardsFollowers directionDrapDrop={directionDrapDrop} />
         <SectionCardsOverviewToday directionDrapDrop={directionDrapDrop} />

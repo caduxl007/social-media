@@ -7,8 +7,7 @@ interface ContainerProps {
 
 export const Container = styled.li<ContainerProps>`
   background: ${({ theme }) => theme.colors.blue_card};
-  max-width: 28rem;
-  width: 100%;
+  width: 28rem;
   padding: 3rem;
   display: flex;
   flex-direction: column;
@@ -19,7 +18,7 @@ export const Container = styled.li<ContainerProps>`
   border-radius: 6px;
   border-top: 4px solid ${({ theme, type_social }) => theme.colors[type_social]};
 
-   p,
+  p,
   h1 {
     color: ${({ theme }) => theme.colors.blue_text};
     font-size: 1.7rem;
@@ -63,7 +62,10 @@ export const Container = styled.li<ContainerProps>`
       font-size: 1.3rem;
       font-weight: bold;
 
-     color: ${({is_gained_followers, theme}) => is_gained_followers ? theme.colors.lime_green : theme.colors.bright_red};
+      color: ${({ is_gained_followers, theme }) =>
+        is_gained_followers
+          ? theme.colors.lime_green
+          : theme.colors.bright_red};
     }
   }
 
