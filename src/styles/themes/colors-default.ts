@@ -4,6 +4,6 @@ export const colors_default = {
   bright_red: 'hsl(356, 69%, 56%)',
   facebook: 'hsl(208, 92%, 53%)',
   twitter: 'hsl(203, 89%, 53%)',
-  instagram: 'linear-gradient(#fdc468, #df4996)',
+  instagram: 'linear-gradient(to right, #fdc468, #df4996);',
   youtube: 'hsl(348, 97%, 39%)',
 };

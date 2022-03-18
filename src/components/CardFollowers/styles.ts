@@ -11,12 +11,24 @@ export const Container = styled.div<ContainerProps>`
   padding: 3rem;
   display: flex;
   flex-direction: column;
+  position: relative;
   gap: 3rem;
   cursor: pointer;
 
   text-align: center;
   border-radius: 6px;
-  border-top: 4px solid ${({ theme, type_social }) => theme.colors[type_social]};
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: ${({ theme, type_social }) => theme.colors[type_social]};
+    height: 4px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
 
   p,
   h1 {
