@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 interface ContainerProps {
   type_social: 'instagram' | 'youtube' | 'facebook' | 'twitter';
-  is_gained_followers: boolean;
+  is_gained: boolean;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -58,8 +58,8 @@ export const Container = styled.div<ContainerProps>`
         font-size: 1.3rem;
         font-weight: bold;
 
-        color: ${({ is_gained_followers, theme }) =>
-          is_gained_followers
+        color: ${({ is_gained, theme }) =>
+          is_gained
             ? theme.colors.lime_green
             : theme.colors.bright_red};
       }

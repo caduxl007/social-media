@@ -9,12 +9,12 @@ import {
 import { useMemo } from 'react';
 import * as S from './styles';
 
-interface CardFollowersProps {
+interface CardOverviewProps {
   title: string;
   type_social: 'instagram' | 'youtube' | 'facebook' | 'twitter';
   total_gained: string;
   qnt_percentage: string;
-  is_gained_followers: boolean;
+  is_gained: boolean;
 }
 
 export function CardOverviewToday({
@@ -22,8 +22,8 @@ export function CardOverviewToday({
   type_social,
   total_gained,
   qnt_percentage,
-  is_gained_followers,
-}: CardFollowersProps) {
+  is_gained,
+}: CardOverviewProps) {
   const icon_social = useMemo(() => {
     switch (type_social) {
       case 'facebook':
@@ -42,7 +42,7 @@ export function CardOverviewToday({
   return (
     <S.Container
       type_social={type_social}
-      is_gained_followers={is_gained_followers}
+      is_gained={is_gained}
     >
       <header>
         <h1>{title}</h1>
@@ -52,7 +52,7 @@ export function CardOverviewToday({
       <footer>
         <h5>{total_gained}</h5>
         <div>
-          {is_gained_followers ? (
+          {is_gained ? (
             <img
               src={IconUp}
               alt="Seta para cima, indicando rendimento de ganhadores positivo"

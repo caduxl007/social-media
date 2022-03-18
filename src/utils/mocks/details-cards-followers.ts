@@ -1,9 +1,7 @@
-const types_social = 'instagram' || 'youtube' || 'facebook' || 'twitter';
-
-interface CardFollowersProps {
+type CardFollowersProps = {
   id: number;
   username: string;
-  type_social:'instagram' | 'youtube' | 'facebook' | 'twitter';
+  type_social: 'instagram' | 'youtube' | 'facebook' | 'twitter';
   total_followers: string;
   today_followers: string;
   is_gained_followers: boolean;
@@ -16,7 +14,7 @@ export const details_cards_followers = [
     username: '@nathanf',
     today_followers: '12',
     total_followers: '1987',
-    type_social: "facebook",
+    type_social: 'facebook',
   },
   {
     id: 2,
@@ -24,7 +22,7 @@ export const details_cards_followers = [
     username: '@nathanf',
     today_followers: '99',
     total_followers: '1044',
-    type_social: "twitter",
+    type_social: 'twitter',
   },
   {
     id: 3,
@@ -32,7 +30,7 @@ export const details_cards_followers = [
     username: '@realnathanf',
     today_followers: '12',
     total_followers: '11K',
-    type_social:"instagram",
+    type_social: 'instagram',
   },
 
   {
@@ -41,6 +39,6 @@ export const details_cards_followers = [
     username: 'Nathan F',
     today_followers: '144',
     total_followers: '8239',
-    type_social: "youtube",
+    type_social: 'youtube',
   },
 ] as CardFollowersProps[];
