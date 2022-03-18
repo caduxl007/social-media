@@ -8,6 +8,7 @@ interface ContainerProps {
 export const Container = styled.div<ContainerProps>`
   background: ${({ theme }) => theme.colors.blue_card};
   max-width: 28rem;
+  width: 100%;
   padding: 3rem;
   display: flex;
   flex-direction: column;

@@ -1,4 +1,5 @@
 import { CardFollowers, Header } from 'components';
+import { details_cards_followers } from 'utils/mocks';
 import * as S from './styles';
 
 export function Home() {
@@ -7,13 +8,15 @@ export function Home() {
       <Header />
       <main>
         <S.ContentCardsFollowers>
-          <CardFollowers
-            is_gained_followers={true}
-            username="@caduxl"
-            today_followers="1000"
-            total_followers="11052"
-            type_social="youtube"
-          />
+          {details_cards_followers.map((data) => (
+            <CardFollowers
+              is_gained_followers={data.is_gained_followers}
+              username={data.username}
+              today_followers={data.today_followers}
+              total_followers={data.total_followers}
+              type_social={data.type_social}
+            />
+          ))}
         </S.ContentCardsFollowers>
       </main>
     </S.Container>

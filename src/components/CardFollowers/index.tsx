@@ -41,7 +41,7 @@ export function CardFollowers({
 
   return (
     <S.Container
-      type_social="twitter"
+      type_social={type_social}
       is_gained_followers={is_gained_followers}
     >
       <header>
