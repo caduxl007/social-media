@@ -35,4 +35,8 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  ul {
+    list-style: none;
+  }
 `;

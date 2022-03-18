@@ -1,5 +1,10 @@
 import { CardOverviewToday } from 'components';
-import { DragDropContext, Droppable, DropResult } from 'react-beautiful-dnd';
+import {
+  DragDropContext,
+  Draggable,
+  Droppable,
+  DropResult
+} from 'react-beautiful-dnd';
 import { details_cards_overview } from 'utils/mocks';
 import { usePersistedState } from 'utils/usePersistedState';
 import * as S from './styles';
@@ -9,7 +14,7 @@ interface SectionProps {
 }
 
 export function SectionCardsOverviewToday({ directionDrapDrop }: SectionProps) {
-  const [followers, setCardFollowers] = usePersistedState(
+  const [overviews, setCardOverviews] = usePersistedState(
     'overview',
     details_cards_overview,
   );
@@ -19,11 +24,11 @@ export function SectionCardsOverviewToday({ directionDrapDrop }: SectionProps) {
       return;
     }
 
-    const items = Array.from(followers);
+    const items = Array.from(overviews);
     const [reordereItem] = items.splice(result.source.index, 1);
     items.splice(result.destination.index, 0, reordereItem);
 
-    setCardFollowers(items);
+    setCardOverviews(items);
   }
 
   return (
@@ -42,17 +47,30 @@ export function SectionCardsOverviewToday({ directionDrapDrop }: SectionProps) {
               {...provided.droppableProps}
               ref={provided.innerRef}
             >
-              {followers.map((data, index) => (
-                <CardOverviewToday
+              {overviews.map((data, index) => (
+                <Draggable
                   key={data.id}
-                  id={data.id}
+                  draggableId={String(data.id)}
                   index={index}
-                  is_gained={data.is_gained}
-                  title={data.title}
-                  total_gained={data.total_gained}
-                  qnt_percentage={data.qnt_percentage}
-                  type_social={data.type_social}
-                />
+                >
+                  {(provided) => (
+                    <li
+                      {...provided.draggableProps}
+                      {...provided.dragHandleProps}
+                      ref={provided.innerRef}
+                    >
+                      {' '}
+                      <CardOverviewToday
+                        key={data.id}
+                        is_gained={data.is_gained}
+                        title={data.title}
+                        total_gained={data.total_gained}
+                        qnt_percentage={data.qnt_percentage}
+                        type_social={data.type_social}
+                      />
+                    </li>
+                  )}
+                </Draggable>
               ))}
               {provided.placeholder}
             </ul>

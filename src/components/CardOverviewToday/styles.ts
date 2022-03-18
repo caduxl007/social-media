@@ -5,10 +5,9 @@ interface ContainerProps {
   is_gained: boolean;
 }
 
-export const Container = styled.li<ContainerProps>`
+export const Container = styled.div<ContainerProps>`
   background: ${({ theme }) => theme.colors.blue_card};
-  max-width: 28rem;
-  width: 100%;
+  width: 28rem;
   padding: 2.5rem 3rem;
   display: flex;
   flex-direction: column;
