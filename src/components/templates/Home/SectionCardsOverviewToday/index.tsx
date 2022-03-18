@@ -1,13 +1,14 @@
 import { CardOverviewToday } from 'components';
-import {
-  DragDropContext, Droppable,
-  DropResult
-} from 'react-beautiful-dnd';
+import { DragDropContext, Droppable, DropResult } from 'react-beautiful-dnd';
 import { details_cards_overview } from 'utils/mocks';
 import { usePersistedState } from 'utils/usePersistedState';
 import * as S from './styles';
 
-export function SectionCardsOverviewToday() {
+interface SectionProps {
+  directionDrapDrop: string;
+}
+
+export function SectionCardsOverviewToday({ directionDrapDrop }: SectionProps) {
   const [followers, setCardFollowers] = usePersistedState(
     'overview',
     details_cards_overview,
@@ -29,7 +30,12 @@ export function SectionCardsOverviewToday() {
     <S.Container>
       <h2>Overview - Today</h2>
       <DragDropContext onDragEnd={handleOnDragEnd}>
-        <Droppable droppableId="overview" direction="horizontal">
+        <Droppable
+          droppableId="overview"
+          direction={
+            directionDrapDrop === 'horizontal' ? 'horizontal' : 'vertical'
+          }
+        >
           {(provided) => (
             <ul
               className="overview"

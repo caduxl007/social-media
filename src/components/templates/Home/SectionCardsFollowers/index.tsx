@@ -4,7 +4,11 @@ import { details_cards_followers } from 'utils/mocks';
 import { usePersistedState } from 'utils/usePersistedState';
 import * as S from './styles';
 
-export function SectionCardsFollowers() {
+interface SectionProps {
+  directionDrapDrop: string;
+}
+
+export function SectionCardsFollowers({ directionDrapDrop }: SectionProps) {
   const [followers, setCardFollowers] = usePersistedState(
     'followers',
     details_cards_followers,
@@ -25,7 +29,12 @@ export function SectionCardsFollowers() {
   return (
     <S.Container>
       <DragDropContext onDragEnd={handleOnDragEnd}>
-        <Droppable droppableId="followers" direction="horizontal">
+        <Droppable
+          droppableId="followers"
+          direction={
+            directionDrapDrop === 'horizontal' ? 'horizontal' : 'vertical'
+          }
+        >
           {(provided) => (
             <ul
               className="followers"
