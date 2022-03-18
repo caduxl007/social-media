@@ -7,18 +7,3 @@ export const Container = styled.div`
     padding: 2rem;
   }
 `;
-
-export const ContentCardsOverviewToday = styled.section`
-  h2 {
-    font-size: 2.8rem;
-    color: ${({ theme }) => theme.colors.text};
-  }
-
-  > div {
-    margin-top: 2rem;
-    display: flex;
-    gap: 3rem;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-`;

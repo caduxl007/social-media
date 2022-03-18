@@ -5,7 +5,7 @@ interface ContainerProps {
   is_gained: boolean;
 }
 
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.li<ContainerProps>`
   background: ${({ theme }) => theme.colors.blue_card};
   max-width: 28rem;
   width: 100%;
@@ -59,9 +59,7 @@ export const Container = styled.div<ContainerProps>`
         font-weight: bold;
 
         color: ${({ is_gained, theme }) =>
-          is_gained
-            ? theme.colors.lime_green
-            : theme.colors.bright_red};
+          is_gained ? theme.colors.lime_green : theme.colors.bright_red};
       }
     }
   }
